@@ -11,4 +11,7 @@ app.get("/greeting/:name", (req, res) => {
     res.send(`Hello, ${name}!`)
 })
 
-// Commit test
+app.get("/tip/:total/:tipPercentage", (req, res) =>{
+    const tipPercentage = req.params.tipPercentage;
+    res.send(tipPercentage);
+})
